@@ -8,8 +8,7 @@ st.title("Biscuit Box Detector")
 
 @st.cache_resource
 def load_model():
-return YOLO("best.pt")
-
+    return YOLO("best.pt")
 model = load_model()
 
 conf = st.slider("Confidence threshold", 0.05, 0.95, 0.25, 0.05)
