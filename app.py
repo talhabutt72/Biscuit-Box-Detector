@@ -19,7 +19,7 @@ conf = st.slider("Confidence threshold", 0.05, 0.95, 0.25, 0.05)
 mode = st.radio("Input", ["Upload image", "Use camera"], horizontal=True)
 
 if mode == "Upload image":
-    file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
+    file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png", "jfif", "webp"])
 else:
     file = st.camera_input("Take a photo")
 
