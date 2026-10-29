@@ -25,7 +25,7 @@ else:
 
 if file is not None:
     image = Image.open(file).convert("RGB")
-    results = model.predict(np.array(image), conf=conf)
+    results = model.predict(image, conf=conf)
     annotated = results[0].plot()[:, :, ::-1]  # BGR -> RGB
     st.image(annotated, caption="Detections", use_container_width=True)
 
