@@ -33,7 +33,7 @@ if file is not None:
 
     boxes = results[0].boxes
     if len(boxes) == 0:
-        st.info("Nothing detected. Try lowering the confidence slider.")
+        st.info("No class found. Either the confidence threshold is too high, so try lowering it, or this image has no biscuit box the model recognizes.")
     else:
         for b in boxes:
             st.write(f"{model.names[int(b.cls)]}: {float(b.conf):.2f}")
